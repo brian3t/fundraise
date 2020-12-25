@@ -2,18 +2,19 @@
 
 namespace app\models\base;
 
-use Yii;
-
 /**
- * This is the base model class for table "todo".
+ * This is the base model class for table "camp".
  *
  * @property integer $id
- * @property string $desc
- * @property bool $is_done
  * @property string $created_at
  * @property string $updated_at
+ * @property string $school
+ * @property string $desc
+ * @property string $target
+ * @property string $note
+ * @property integer $created_by
  */
-class Todo extends \yii\db\ActiveRecord
+class Camp extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
 
@@ -33,11 +34,14 @@ class Todo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['desc'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
-            [['desc'], 'string', 'max' => 255],
-            [['is_done'], 'boolean'],
-            [['desc'], 'unique']
+            [['school'], 'required'],
+            [['target'], 'number'],
+            [['created_by'], 'integer'],
+            [['school'], 'string', 'max' => 255],
+            [['desc'], 'string', 'max' => 2000],
+            [['note'], 'string', 'max' => 800],
+            [['school'], 'unique']
         ];
     }
 
@@ -46,7 +50,7 @@ class Todo extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'todo';
+        return 'camp';
     }
 
     /**
@@ -56,8 +60,10 @@ class Todo extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'school' => 'School',
             'desc' => 'Desc',
-            'is_done' => 'Is Done',
+            'target' => 'Target',
+            'note' => 'Note',
         ];
     }
 }
