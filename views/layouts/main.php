@@ -46,28 +46,9 @@ AppAsset::register($this);
     ];
     $items = array_merge($items, [
         [
-            'label' => 'Wagers',
-            'url' => Url::toRoute(['/wager/index']),
+            'label' => 'Campaign',
+            'url' => Url::toRoute(['/camp/index']),
         ],
-        [
-            'label' => 'Games',
-            'url' => Url::toRoute(['/game/index']),
-        ],
-        [
-            'label' => 'Todo',
-            'url' => Url::toRoute(['/todo/index']),
-        ],
-        /*[
-            'label' => 'Teams',
-            'url' => Url::toRoute(['/team/index']),
-        ],
-        [
-            'label' => 'Invitations',
-            'url' => Url::toRoute(['/invi/index']),
-        ],*/
-        ['label' => 'Webapp', 'url' => 'https://app.livenout.usvsolutions.com', 'linkOptions' => ['target' => '_blank'],
-        ],
-
 
     ]);
     if (! Yii::$app->user->isGuest) {
@@ -124,7 +105,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; NFL Fan Wager <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Craftbelly Admin <?= date('Y') ?></p>
 
     </div>
 </footer>

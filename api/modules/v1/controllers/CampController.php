@@ -3,25 +3,21 @@
 namespace app\api\modules\v1\controllers;
 
 use app\api\base\controllers\BaseActiveController;
+use app\models\Camp;
+use yii\data\ActiveDataProvider;
+use yii\rest\IndexAction;
 
 
 require_once realpath(dirname(dirname(dirname(dirname(__DIR__))))). "/models/constants.php";
-class GameController extends BaseActiveController
+class CampController extends BaseActiveController
 {
     // We are using the regular web app modules:
-    public $modelClass = 'app\models\Game';
+    public $modelClass = 'app\models\Camp';
 
     public function actions()
     {
         $actions = parent::actions();
 
-        // disable the default REST actions
-//        unset($actions['index']);
-
         return $actions;
     }
-
-    // prepare and return a data provider for the "index" action
-
-
 }

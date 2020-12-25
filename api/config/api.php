@@ -39,7 +39,7 @@ $config = [
                 [
                     'class' => 'yii\rest\UrlRule',
                     'pluralize' => false,
-                    'controller' => ['v1/user', 'v1/game', 'v1/todo'],
+                    'controller' => ['v1/user', 'v1/camp'],
                     'patterns' => ['PUT,PATCH {id}' => 'update', 'DELETE {id}' => 'delete', 'GET,HEAD {id}' => 'view', 'POST' => 'create', 'GET,HEAD' => 'index', '{id}' => 'options'
                       ,'PUT,PATCH' => 'update'   , '' => 'options'],
                     // 'extraPatterns' => [
