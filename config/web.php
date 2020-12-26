@@ -17,6 +17,10 @@ $params['dateControlSave'] = [
     Module::FORMAT_DATETIME => 'php:Y-m-d H:i:s',
 ];
 $config = [
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'name' => 'Craftbelly Admin',
