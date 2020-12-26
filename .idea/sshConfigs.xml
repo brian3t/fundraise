@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="simplre.com" id="39ee1c63-8419-4409-bdc9-6099c9620c05" keyPath="$USER_HOME$/tmp/mega/projects/craft/craftbelaws.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" />
+    </configs>
+  </component>
+</project>
