@@ -23,7 +23,7 @@ $config = [
     ],
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'name' => 'Craftbelly Admin',
+    'name' => 'Fundraiser Admin',
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
@@ -96,7 +96,7 @@ $config = [
         'user' => [
             'class' => Da\User\Module::class,
             // ...other configs from here: [Configuration Options](installation/configuration-options.md), e.g.
-             'administrators' => ['admin','ngxtri','windlinx@hotmail.com'], // this is required for accessing administrative actions
+             'administrators' => ['admin','ngxtri'], // this is required for accessing administrative actions
             // 'generatePasswords' => true,
             // 'switchIdentitySessionKey' => 'myown_usuario_admin_user_key',
             // docs: https://yii2-usuario.readthedocs.io/en/latest/installation/available-actions/
