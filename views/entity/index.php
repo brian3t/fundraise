@@ -60,7 +60,7 @@ $this->registerJs($search);
         ],
         [
             'class' => 'yii\grid\ActionColumn',
-            'template' => '{edit-who-we-are} {edit-mission} {save-as-new} {view} {update} {delete}',
+            'template' => '{edit-who-we-are} | {edit-mission} {save-as-new} {update}',
             'buttons' => [
                 'save-as-new' => function ($url) {
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);

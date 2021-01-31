@@ -38,13 +38,16 @@ AppAsset::register($this);
 //            'class' => 'navbar navbar-nav navbar-default navbar-fixed-top',
         ],
     ]);
-    echo '<span class="version">v0.7</span>';
+    echo '<span class="version">v01.31</span>';
     $items = [];
     $admin_items = [
 
     ];
     $items = array_merge($items, [
         [
+            'label' => 'Dashboard',
+            'url' => Url::toRoute(['/user/dashboard', 'id' => Yii::$app->user->id]),
+        ],[
             'label' => 'Entity',
             'url' => Url::toRoute(['/entity/index']),
         ],

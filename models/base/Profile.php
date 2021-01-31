@@ -15,6 +15,8 @@ namespace app\models\base;
  * @property string $bio
  *
  * @property \app\models\User $user
+ * @property string $timezone [varchar(40)]
+ * @property string $usr_ava [varchar(255)]
  */
 class Profile extends \yii\db\ActiveRecord
 {
@@ -67,4 +69,4 @@ class Profile extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\User::className(), ['id' => 'user_id'])->inverseOf('profile');
     }
-    }
+}
