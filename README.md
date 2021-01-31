@@ -5,7 +5,7 @@ Built with Yii 2.0.14
 Changelog
 ------------
 2021/01/31
-Added `profile` table column avatar_file (uploads/avatar/)
+Added `profile` table column usr_ava (uploads/avatar/ or api/avatar)
 
 Screenshot:
 
