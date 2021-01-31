@@ -5,7 +5,6 @@
 /* @var $content string */
 
 use app\assets\AppAsset;
-use kartik\widgets\Alert;
 use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
@@ -88,17 +87,18 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <div class="flash">
-            <?php foreach (Yii::$app->session->allFlashes as $key => $message) {
+<!--        <div class="flash">
+            <?php /*foreach (Yii::$app->session->allFlashes as $key => $message) {
                 echo \kartik\widgets\Alert::widget([
+                    'bsVersion' => '4.x',
                     'type' => Alert::TYPE_INFO,
                     'title' => ucwords($key),
                     'body' => is_array($message) ? implode('<br/>', $message) : $message,
                     'icon' => 'glyphicon glyphicon-info-sign',
                 ]);
             }
-            ?>
-        </div>
+            */?>
+        </div>-->
         <?= $content ?>
     </div>
 </div>

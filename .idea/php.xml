@@ -139,6 +139,7 @@
       <path value="$PROJECT_DIR$/vendor/bower/bootstrap" />
       <path value="$PROJECT_DIR$/vendor/bower/jquery" />
       <path value="$PROJECT_DIR$/vendor/bower/microplugin" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap__" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

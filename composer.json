@@ -17,7 +17,7 @@
     "irc": "irc://irc.freenode.net/yii",
     "source": "https://github.com/yiisoft/yii2"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require": {
     "php": ">=8.0",
     "ext-json": "*",
@@ -26,7 +26,7 @@
     "kartik-v/yii2-widgets": "*",
     "kartik-v/yii2-field-range": "*",
     "vova07/yii2-console-runner-extension": "*",
-    "kartik-v/yii2-widget-growl": "^1.1",
+    "kartik-v/yii2-widget-growl": "*",
     "mootensai/yii2-enhanced-gii": "dev-master",
     "kartik-v/yii2-date-range": "@dev",
     "kartik-v/yii2-grid": "^3.1",
@@ -46,7 +46,8 @@
     "kartik-v/yii2-icons": "^1.4",
     "ext-pdo": "*",
     "tuyakhov/yii2-json-api": "*",
-    "guzzlehttp/guzzle": "^7.2"
+    "guzzlehttp/guzzle": "^7.2",
+    "kartik-v/yii2-widget-alert": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "*",

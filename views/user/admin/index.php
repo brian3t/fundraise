@@ -36,7 +36,17 @@ $module = Yii::$app->getModule('user');
         'filterModel' => $searchModel,
         'layout' => "{items}\n{pager}",
         'columns' => [
-            'username',
+            [
+                'attribute' => 'username',
+                'value' => function ($model) {
+                       return Html::a(
+                        $model->username,
+                        "/user/admin/update?id=" . $model->id,
+
+                    );
+                },
+                'format' => 'raw',
+            ],
             'email:email',
             [
                 'attribute' => 'registration_ip',
