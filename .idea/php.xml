@@ -78,7 +78,6 @@
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-tabs-x" />
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-date-range" />
       <path value="$PROJECT_DIR$/vendor/php-http/message" />
-      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-mpdf" />
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-affix" />
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-sortable" />
@@ -87,10 +86,7 @@
       <path value="$PROJECT_DIR$/vendor/tuyakhov/yii2-json-api" />
       <path value="$PROJECT_DIR$/vendor/creocoder/yii2-nested-sets" />
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
-      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
       <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
-      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
-      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
       <path value="$PROJECT_DIR$/vendor/mootensai/yii2-relation-trait" />
       <path value="$PROJECT_DIR$/vendor/mootensai/yii2-jsblock" />
       <path value="$PROJECT_DIR$/vendor/mootensai/yii2-enhanced-gii" />
@@ -101,7 +97,6 @@
       <path value="$PROJECT_DIR$/vendor/mootensai/yii2-uuid-behavior" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/willdurand/geocoder" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/inputmask" />
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
@@ -115,8 +110,6 @@
       <path value="$PROJECT_DIR$/vendor/bower-asset/punycode" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/selectize" />
       <path value="$PROJECT_DIR$/vendor/bower-asset/yii2-pjax" />
-      <path value="$PROJECT_DIR$/vendor/geocoder-php/common-http" />
-      <path value="$PROJECT_DIR$/vendor/geocoder-php/google-maps-provider" />
       <path value="$PROJECT_DIR$/vendor/mikevanriel/text-to-latex" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/voskobovich/yii2-many-many-behavior" />

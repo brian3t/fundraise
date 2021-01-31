@@ -45,6 +45,13 @@ AppAsset::register($this);
     ];
     $items = array_merge($items, [
         [
+            'label' => 'Entity',
+            'url' => Url::toRoute(['/entity/index']),
+        ],
+
+    ]);
+    $items = array_merge($items, [
+        [
             'label' => 'Campaign',
             'url' => Url::toRoute(['/camp/index']),
         ],

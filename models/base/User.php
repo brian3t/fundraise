@@ -27,11 +27,24 @@ namespace app\models\base;
  * @property integer $gdpr_deleted
  * @property integer $point
  *
- * @property \app\models\Invi[] $invis
  * @property \app\models\Profile $profile
  * @property \app\models\SocialAccount[] $socialAccounts
  * @property \app\models\Token[] $tokens
- * @property \app\models\Wager[] $wagers
+ * @property string $roles [varchar(800)]
+ * @property int $status [smallint]
+ * @property string $password [varchar(255)]
+ * @property string $password_strategy [varchar(50)]
+ * @property string $salt [varchar(255)]
+ * @property bool $requires_new_password [tinyint]
+ * @property string $reset_token [varchar(255)]
+ * @property int $login_attempts [int]
+ * @property int $login_time [int]
+ * @property string $login_ip [varchar(32)]
+ * @property string $activation_key [varchar(128)]
+ * @property string $validation_key [varchar(255)]
+ * @property string $create_time [datetime]
+ * @property string $update_time [datetime]
+ * @property string $name [varchar(2000)]
  */
 class User extends \yii\db\ActiveRecord
 {
@@ -48,9 +61,9 @@ class User extends \yii\db\ActiveRecord
 
 
     /**
-    * This function helps \mootensai\relation\RelationTrait runs faster
-    * @return array relation names of this model
-    */
+     * This function helps \mootensai\relation\RelationTrait runs faster
+     * @return array relation names of this model
+     */
     public function relationNames()
     {
         return [
@@ -120,14 +133,6 @@ class User extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getInvis()
-    {
-        return $this->hasMany(\app\models\Invi::className(), ['invited_user_id' => 'id'])->inverseOf('invitedUser');
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getProfile()
     {
         return $this->hasOne(\app\models\Profile::className(), ['user_id' => 'id'])->inverseOf('user');
@@ -152,8 +157,8 @@ class User extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getWagers()
+    public function getEntities()
     {
-        return $this->hasMany(\app\models\Wager::className(), ['pending_by' => 'id'])->inverseOf('acceptedBy')->inverseOf('createdBy')->inverseOf('pendingBy');
+        return $this->hasMany(\app\models\Entity::class, ['created_by' => 'id'])->inverseOf('user');
     }
-    }
+}
