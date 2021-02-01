@@ -46,7 +46,7 @@ AppAsset::register($this);
     $items = array_merge($items, [
         [
             'label' => 'Dashboard',
-            'url' => Url::toRoute(['/user/dashboard', 'id' => Yii::$app->user->id]),
+            'url' => Url::toRoute(['/u/dashboard', 'id' => Yii::$app->user->id]),
         ],[
             'label' => 'Entity',
             'url' => Url::toRoute(['/entity/index']),

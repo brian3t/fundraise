@@ -10,5 +10,7 @@ use app\models\base\Profile as BaseProfile;
 class Profile extends BaseProfile
 {
     public static $order_by_col='name';
-
+    public function get_usr_ava(){
+        return $this->usr_ava ?? 'default_avatar.png';
+    }
 }
