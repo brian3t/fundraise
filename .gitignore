@@ -1,4 +1,4 @@
-vendor
+vendor/*
 web/docs
 config/db.php
 # phpstorm project files
