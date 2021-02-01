@@ -45,6 +45,8 @@ namespace app\models\base;
  * @property string $create_time [datetime]
  * @property string $update_time [datetime]
  * @property string $name [varchar(2000)]
+ * @property \app\models\CampUser[] $campUsers
+ * @property \app\models\Entity[] $entities
  */
 class User extends \yii\db\ActiveRecord
 {
@@ -71,7 +73,9 @@ class User extends \yii\db\ActiveRecord
             'profile',
             'socialAccounts',
             'tokens',
-            'wagers'
+            'wagers',
+            'campUsers',
+            'entities',
         ];
     }
 
@@ -129,6 +133,28 @@ class User extends \yii\db\ActiveRecord
             'point' => 'Point',
         ];
     }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCampUsers()
+    {
+        return $this->hasMany(\app\models\CampUser::class, ['userid' => 'id'])->inverseOf('user');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCamps()
+    {
+        return $this->hasMany(\app\models\Camp::class, ['id' => 'campid'])->via('campUsers')->inverseOf('users');
+    }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEntities()
+    {
+        return $this->hasMany(\app\models\Entity::class, ['owned_by' => 'id'])->inverseOf('ownedBy');
+    }
 
     /**
      * @return \yii\db\ActiveQuery
@@ -154,11 +180,4 @@ class User extends \yii\db\ActiveRecord
         return $this->hasMany(\app\models\Token::className(), ['user_id' => 'id'])->inverseOf('user');
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEntities()
-    {
-        return $this->hasMany(\app\models\Entity::class, ['created_by' => 'id'])->inverseOf('user');
-    }
 }

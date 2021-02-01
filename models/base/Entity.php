@@ -77,7 +77,7 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getCamps()
     {
-        return $this->hasMany(\app\models\Camp::className(), ['entity_id' => 'id'])->inverseOf('entity');
+        return $this->hasMany(\app\models\Camp::class, ['entity_id' => 'id'])->inverseOf('entity');
     }
 
     /**
@@ -85,7 +85,7 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getOwnedBy()
     {
-        return $this->hasOne(\app\models\User::className(), ['id' => 'owned_by'])->inverseOf('entities');
+        return $this->hasOne(\app\models\User::class, ['id' => 'owned_by'])->inverseOf('entities');
     }
 
     /**
@@ -93,7 +93,7 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getUpdatedBy()
     {
-        return $this->hasOne(\app\models\User::className(), ['id' => 'updated_by'])->inverseOf('entities');
+        return $this->hasOne(\app\models\User::class, ['id' => 'updated_by'])->inverseOf('entities');
     }
 
     /**
@@ -104,7 +104,7 @@ class Entity extends \yii\db\ActiveRecord
     {
         return [
             'blameable' => [
-                'class' => BlameableBehavior::className(),
+                'class' => BlameableBehavior::class,
                 'createdByAttribute' => 'owned_by',
                 'updatedByAttribute' => 'updated_by',
             ],
