@@ -41,3 +41,4 @@ api/index.php
 web/scrape/ig_*.html
 /runtime/
 web/img/avatars/*
+web/uploads/avatar/*

@@ -7,7 +7,10 @@
 
 /* @var $profile \app\models\Profile */
 
+/* @var $profile_usr_ava_model \app\models\u\Profile_usr_ava */
+
 use yii\bootstrap4\Html;
+use yii\widgets\ActiveForm;
 
 ?>
 <div class="row">
@@ -16,9 +19,21 @@ use yii\bootstrap4\Html;
       <div class="col-sm-6 col-md-4">
         <div class="form-group field-profile-usr_ava">
           <label class="col-lg-3 control-label" for="profile-usr_ava">User Avatar</label>
-          <div class="col-lg-9"><img src="/img/avatars/<?= $profile->get_usr_ava() ?>" alt="user avatar"></div>
+          <div class="col-lg-9"><img src="/uploads/avatar/<?= $model->id . '/' . $profile->get_usr_ava() ?>" alt="user avatar" class="mw-100"></div>
+            <?php $form = ActiveForm::begin() ?>
+            <?= $form->field($profile_usr_ava_model, 'imageFile')
+                ->widget(\kartik\file\FileInput::class, ['pluginOptions' => [
+                    'showPreview' => false,
+                    'showCaption' => true,
+                    'showRemove' => true,
+                    'showUpload' => false
+                ]
+                ])->label('') ?>
+          <button class="btn btn-sm btn-light">Change Photo</button>
+            <?php ActiveForm::end() ?>
         </div>
       </div>
+
       <div class="col-sm-6 col-md-8">
         <h4><?= $this->title ?></h4>
         <ul style="padding: 0; list-style: none outside none;">
