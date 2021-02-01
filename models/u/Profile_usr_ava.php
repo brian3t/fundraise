@@ -31,11 +31,16 @@ class Profile_usr_ava extends Model
      */
     public function upload($userid)
     {
-        if ($this->validate()) {
-            $this->imageFile->saveAs('uploads/avatar/' . $userid . '/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
-            return true;
-        } else {
-            return false;
+        $path = \Yii::getAlias('@webroot') . "/uploads/avatar/$userid";
+        try {
+            if ($this->validate() && (\yii\helpers\FileHelper::createDirectory($path, $mode = 0775, $recursive = true))) {
+                $this->imageFile->saveAs('uploads/avatar/' . $userid . '/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Exception $exception) {
+            throw $exception;
         }
     }
 }
