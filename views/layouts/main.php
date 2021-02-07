@@ -31,7 +31,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/img/logo_sml.png'),
+        'brandLabel' => Html::img('@web/img/logo.png',['class' => 'sml']),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-nav navbar-light navbar-expand-lg w-100',
