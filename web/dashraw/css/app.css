@@ -3477,6 +3477,7 @@ body.dark .radio__input:checked + .radio__in .radio__text {
   background: #ffffff;
   border-radius: 24px; }
 
+/*
 .details__container:before {
   content: "";
   position: absolute;
@@ -3489,10 +3490,17 @@ body.dark .radio__input:checked + .radio__in .radio__text {
   opacity: 0.91;
   -webkit-filter: blur(86.985px);
   filter: blur(86.985px);
-  border-radius: 24px; }
-
+  border-radius: 24px;
+}
+*/
 .details__title {
   margin-bottom: 40px; }
+
+.details__title.arrow_down {
+  background-image: url("/img/arrow_down.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: right; }
 
 .details__row {
   display: -webkit-box;
@@ -3503,7 +3511,7 @@ body.dark .radio__input:checked + .radio__in .radio__text {
 .details__col:first-child {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 145px;
+  width: 225px;
   padding-right: 16px; }
 
 .details__col:nth-child(2) {
@@ -3513,8 +3521,7 @@ body.dark .radio__input:checked + .radio__in .radio__text {
 
 .details__top {
   margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #E4E4E4; }
+  padding-bottom: 16px; }
 
 .details__number {
   margin-bottom: 16px; }
@@ -3707,7 +3714,7 @@ body.dark .radio__input:checked + .radio__in .radio__text {
   width: 200px; }
 
 .details:not(:last-child) {
-  margin-bottom: 28px; }
+  margin-bottom: 50px; }
 
 .details_statements:not(:last-child) {
   margin-bottom: 68px; }
@@ -6496,6 +6503,14 @@ body.dark .mfp-bg {
   line-height: 1.1875;
   font-weight: 600; }
 
+.title_16 {
+  font-family: Inter, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #11142D; }
+
 .title_lg, .title_md, .title_sm {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -7979,3 +7994,30 @@ body.dark .mfp-bg {
     letter-spacing: -.5px; } }
 
 /*# sourceMappingURL=app.css.map */
+h4.h4_32 {
+  /* headline/h4 - 32 */
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+  letter-spacing: -0.5px;
+  /* text/active */
+  color: #11142D;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+
+.mw-40 {
+  max-width: 40% !important; }
+
+.mw-60 {
+  max-width: 60% !important; }
+
+.mw-80 {
+  max-width: 80% !important; }
+
+.mw-100 {
+  max-width: 100% !important; }
+
+.mb-0 {
+  margin-bottom: 0 !important; }
