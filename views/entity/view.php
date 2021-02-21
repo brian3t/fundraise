@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Entity */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Entity', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Entities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="entity-view">
@@ -41,6 +41,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'attribute' => 'ownedBy.username',
             'label' => 'Owned By',
         ],
+        'platform',
+        'shopurl:url',
+        'apiver',
+        'apikey',
+        'apipw',
     ];
     echo DetailView::widget([
         'model' => $model,
@@ -58,7 +63,6 @@ if($providerCamp->totalCount){
             'desc',
             'target',
             'note',
-            'created_by',
             'campdate',
                 ];
     echo Gridview::widget([
@@ -132,4 +136,42 @@ if($providerCamp->totalCount){
         'model' => $model->updatedBy,
         'attributes' => $gridColumnUser    ]);
     ?>
+
+    <div class="row">
+<?php
+if($providerProduct->totalCount){
+    $gridColumnProduct = [
+        ['class' => 'yii\grid\SerialColumn'],
+            ['attribute' => 'id', 'visible' => false],
+                        'title',
+            'body_html',
+            'variantid',
+            'spfid',
+            'price',
+            'sku',
+            'taxable',
+            'weight',
+            'weight_unit',
+            'inventory_item_id',
+            'requires_shipping',
+            'img',
+            'json_data',
+            'fulfillment_service',
+            'inventory_quantity',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerProduct,
+        'pjax' => true,
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-product']],
+        'panel' => [
+            'type' => GridView::TYPE_PRIMARY,
+            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Product'),
+        ],
+        'export' => false,
+        'columns' => $gridColumnProduct
+    ]);
+}
+?>
+
+    </div>
 </div>

@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Entity */
 
 $this->title = 'Save As New Entity: '. ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Entity', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Entities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Save As New';
 ?>

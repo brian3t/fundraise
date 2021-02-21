@@ -25,7 +25,6 @@ echo TabularForm::widget([
         'desc' => ['type' => TabularForm::INPUT_TEXT],
         'target' => ['type' => TabularForm::INPUT_TEXT],
         'note' => ['type' => TabularForm::INPUT_TEXT],
-        'created_by' => ['type' => TabularForm::INPUT_TEXT],
         'campdate' => ['type' => TabularForm::INPUT_WIDGET,
             'widgetClass' => \kartik\datecontrol\DateControl::classname(),
             'options' => [

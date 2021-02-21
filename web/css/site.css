@@ -85,3 +85,6 @@ div.grid-view img {
 
 .popover-xxl {
   min-width: 960px; }
+
+img.sml {
+  height: 50px; }

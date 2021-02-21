@@ -17,7 +17,14 @@ $items = [
             'row' => $model->camps,
         ]),
     ],
-            ];
+                    [
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Product'),
+        'content' => $this->render('_dataProduct', [
+            'model' => $model,
+            'row' => $model->products,
+        ]),
+    ],
+    ];
 echo TabsX::widget([
     'items' => $items,
     'position' => TabsX::POS_ABOVE,

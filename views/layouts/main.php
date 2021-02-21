@@ -58,6 +58,10 @@ AppAsset::register($this);
             'label' => 'Campaign',
             'url' => Url::toRoute(['/camp/index']),
         ],
+        [
+            'label' => 'Product',
+            'url' => Url::toRoute(['/product/index']),
+        ],
 
     ]);
     if (! Yii::$app->user->isGuest) {

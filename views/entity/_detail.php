@@ -25,6 +25,11 @@ use yii\widgets\DetailView;
             'attribute' => 'ownedBy.username',
             'label' => 'Owned By',
         ],
+        'platform',
+        'shopurl:url',
+        'apiver',
+        'apikey',
+        'apipw',
     ];
     echo DetailView::widget([
         'model' => $model,

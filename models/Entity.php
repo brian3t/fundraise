@@ -20,7 +20,10 @@ class Entity extends BaseEntity
             [['name'], 'required'],
             [['owned_by', 'updated_by'], 'integer'],
             [['name'], 'string', 'max' => 500],
-            [['note'], 'string', 'max' => 2000]
+            [['note'], 'string', 'max' => 2000],
+            [['platform', 'apiver'], 'string', 'max' => 80],
+            [['shopurl'], 'string', 'max' => 255],
+            [['apikey', 'apipw'], 'string', 'max' => 64]
         ]);
     }
 

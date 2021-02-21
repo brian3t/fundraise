@@ -15,6 +15,14 @@ use yii\widgets\ActiveForm;
         'isNewRecord' => ($model->isNewRecord) ? 1 : 0
     ]
 ]);
+\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
+    'viewParams' => [
+        'class' => 'Product', 
+        'relID' => 'product', 
+        'value' => \yii\helpers\Json::encode($model->products),
+        'isNewRecord' => ($model->isNewRecord) ? 1 : 0
+    ]
+]);
 ?>
 
 <div class="entity-form">
@@ -37,12 +45,28 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
+    <?= $form->field($model, 'platform')->textInput(['maxlength' => true, 'placeholder' => 'Platform']) ?>
+
+    <?= $form->field($model, 'shopurl')->textInput(['maxlength' => true, 'placeholder' => 'Shopurl']) ?>
+
+    <?= $form->field($model, 'apiver')->textInput(['maxlength' => true, 'placeholder' => 'Apiver']) ?>
+
+    <?= $form->field($model, 'apikey')->textInput(['maxlength' => true, 'placeholder' => 'Apikey']) ?>
+
+    <?= $form->field($model, 'apipw')->textInput(['maxlength' => true, 'placeholder' => 'Apipw']) ?>
+
     <?php
     $forms = [
         [
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Camp'),
             'content' => $this->render('_formCamp', [
                 'row' => \yii\helpers\ArrayHelper::toArray($model->camps),
+            ]),
+        ],
+        [
+            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Product'),
+            'content' => $this->render('_formProduct', [
+                'row' => \yii\helpers\ArrayHelper::toArray($model->products),
             ]),
         ],
     ];

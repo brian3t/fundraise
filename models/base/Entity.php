@@ -2,8 +2,6 @@
 
 namespace app\models\base;
 
-use yii\behaviors\BlameableBehavior;
-
 /**
  * This is the base model class for table "entity".
  *
@@ -14,10 +12,16 @@ use yii\behaviors\BlameableBehavior;
  * @property string $note
  * @property integer $owned_by
  * @property integer $updated_by
+ * @property string $platform
+ * @property string $shopurl
+ * @property string $apiver
+ * @property string $apikey
+ * @property string $apipw
  *
  * @property \app\models\Camp[] $camps
  * @property \app\models\User $ownedBy
  * @property \app\models\User $updatedBy
+ * @property \app\models\Product[] $products
  */
 class Entity extends \yii\db\ActiveRecord
 {
@@ -33,7 +37,8 @@ class Entity extends \yii\db\ActiveRecord
         return [
             'camps',
             'ownedBy',
-            'updatedBy'
+            'updatedBy',
+            'products'
         ];
     }
 
@@ -47,7 +52,10 @@ class Entity extends \yii\db\ActiveRecord
             [['name'], 'required'],
             [['owned_by', 'updated_by'], 'integer'],
             [['name'], 'string', 'max' => 500],
-            [['note'], 'string', 'max' => 2000]
+            [['note'], 'string', 'max' => 2000],
+            [['platform', 'apiver'], 'string', 'max' => 80],
+            [['shopurl'], 'string', 'max' => 255],
+            [['apikey', 'apipw'], 'string', 'max' => 64]
         ];
     }
 
@@ -69,6 +77,11 @@ class Entity extends \yii\db\ActiveRecord
             'name' => 'Name',
             'note' => 'Note',
             'owned_by' => 'Owned By',
+            'platform' => 'Platform',
+            'shopurl' => 'Shopurl',
+            'apiver' => 'Apiver',
+            'apikey' => 'Apikey',
+            'apipw' => 'Apipw',
         ];
     }
 
@@ -77,7 +90,7 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getCamps()
     {
-        return $this->hasMany(\app\models\Camp::class, ['entity_id' => 'id'])->inverseOf('entity');
+        return $this->hasMany(\app\models\Camp::className(), ['entity_id' => 'id'])->inverseOf('entity');
     }
 
     /**
@@ -85,7 +98,7 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getOwnedBy()
     {
-        return $this->hasOne(\app\models\User::class, ['id' => 'owned_by'])->inverseOf('entities');
+        return $this->hasOne(\app\models\User::className(), ['id' => 'owned_by'])->inverseOf('entities');
     }
 
     /**
@@ -93,21 +106,14 @@ class Entity extends \yii\db\ActiveRecord
      */
     public function getUpdatedBy()
     {
-        return $this->hasOne(\app\models\User::class, ['id' => 'updated_by'])->inverseOf('entities');
+        return $this->hasOne(\app\models\User::className(), ['id' => 'updated_by'])->inverseOf('entities');
     }
 
     /**
-     * @inheritdoc
-     * @return array mixed
+     * @return \yii\db\ActiveQuery
      */
-    public function behaviors()
+    public function getProducts()
     {
-        return [
-            'blameable' => [
-                'class' => BlameableBehavior::class,
-                'createdByAttribute' => 'owned_by',
-                'updatedByAttribute' => 'updated_by',
-            ],
-        ];
+        return $this->hasMany(\app\models\Product::className(), ['entity_id' => 'id'])->inverseOf('entity');
     }
-}
+    }
