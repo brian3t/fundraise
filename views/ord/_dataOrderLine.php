@@ -4,30 +4,27 @@ use kartik\grid\GridView;
 use yii\data\ArrayDataProvider;
 
 $dataProvider = new ArrayDataProvider([
-        'allModels' => $model->products,
+        'allModels' => $model->orderLines,
         'key' => 'id'
     ]);
     $gridColumns = [
         ['class' => 'yii\grid\SerialColumn'],
         ['attribute' => 'id', 'visible' => false],
-        'title',
-        'body_html',
-        'variantid',
+        [
+                'attribute' => 'product.title',
+                'label' => 'Product'
+            ],
         'spfid',
-        'price',
-        'sku',
-        'taxable',
-        'weight',
-        'weight_unit',
-        'inventory_item_id',
-        'requires_shipping',
-        'img',
-        'json_data',
+        'variant_id',
+        'quantity',
         'fulfillment_service',
-        'inventory_quantity',
+        'requires_shipping',
+        'price',
+        'total_discount',
+        'fulfillment_status',
         [
             'class' => 'yii\grid\ActionColumn',
-            'controller' => 'product'
+            'controller' => 'order-line'
         ],
     ];
 

@@ -2,6 +2,8 @@
 
 namespace app\models\base;
 
+use Yii;
+
 /**
  * This is the base model class for table "entity".
  *
@@ -21,6 +23,7 @@ namespace app\models\base;
  * @property \app\models\Camp[] $camps
  * @property \app\models\User $ownedBy
  * @property \app\models\User $updatedBy
+ * @property \app\models\Ord[] $ords
  * @property \app\models\Product[] $products
  */
 class Entity extends \yii\db\ActiveRecord
@@ -38,6 +41,7 @@ class Entity extends \yii\db\ActiveRecord
             'camps',
             'ownedBy',
             'updatedBy',
+            'ords',
             'products'
         ];
     }
@@ -84,7 +88,7 @@ class Entity extends \yii\db\ActiveRecord
             'apipw' => 'Apipw',
         ];
     }
-
+    
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -92,7 +96,7 @@ class Entity extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\Camp::className(), ['entity_id' => 'id'])->inverseOf('entity');
     }
-
+        
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -100,7 +104,7 @@ class Entity extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\User::className(), ['id' => 'owned_by'])->inverseOf('entities');
     }
-
+        
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -108,7 +112,15 @@ class Entity extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\User::className(), ['id' => 'updated_by'])->inverseOf('entities');
     }
-
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOrds()
+    {
+        return $this->hasMany(\app\models\Ord::className(), ['entity_id' => 'id'])->inverseOf('entity');
+    }
+        
     /**
      * @return \yii\db\ActiveQuery
      */

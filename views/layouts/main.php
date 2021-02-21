@@ -17,13 +17,13 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="<?= Yii::$app->charset ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+  <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link rel="stylesheet"
-          href="//<?= Yii::$app->request->serverName . "/" . Yii::$app->request->baseUrl ?>less/stylesheets/custom.css">
+  <link rel="stylesheet"
+        href="//<?= Yii::$app->request->serverName . "/" . Yii::$app->request->baseUrl ?>less/stylesheets/custom.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -31,7 +31,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/img/logo.png',['class' => 'sml']),
+        'brandLabel' => Html::img('@web/img/logo.png', ['class' => 'sml']),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-nav navbar-light navbar-expand-lg w-100',
@@ -47,7 +47,7 @@ AppAsset::register($this);
         [
             'label' => 'Dashboard',
             'url' => Url::toRoute(['/u/dashboard', 'id' => Yii::$app->user->id]),
-        ],[
+        ], [
             'label' => 'Entity',
             'url' => Url::toRoute(['/entity/index']),
         ],
@@ -58,10 +58,9 @@ AppAsset::register($this);
             'label' => 'Campaign',
             'url' => Url::toRoute(['/camp/index']),
         ],
-        [
-            'label' => 'Product',
-            'url' => Url::toRoute(['/product/index']),
-        ],
+        ['label' => 'Product', 'url' => Url::toRoute(['/product/index']),],
+        ['label' => 'Order', 'url' => Url::toRoute(['/ord/index']),],
+        ['label' => 'Order Line', 'url' => Url::toRoute(['/order-line/index']),],
 
     ]);
     if (! Yii::$app->user->isGuest) {
@@ -97,11 +96,11 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container-fluid">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-<!--        <div class="flash">
+  <div class="container-fluid">
+      <?= Breadcrumbs::widget([
+          'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+      ]) ?>
+    <!--        <div class="flash">
             <?php /*foreach (Yii::$app->session->allFlashes as $key => $message) {
                 echo \kartik\widgets\Alert::widget([
                     'bsVersion' => '4.x',
@@ -111,17 +110,17 @@ AppAsset::register($this);
                     'icon' => 'glyphicon glyphicon-info-sign',
                 ]);
             }
-            */?>
+            */ ?>
         </div>-->
-        <?= $content ?>
-    </div>
+      <?= $content ?>
+  </div>
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; Craftbelly Admin <?= date('Y') ?></p>
+  <div class="container">
+    <p class="pull-left">&copy; Craftbelly Admin <?= date('Y') ?></p>
 
-    </div>
+  </div>
 </footer>
 
 <?php $this->endBody() ?>

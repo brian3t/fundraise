@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Entity;
+use app\models\Ord;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * EntityController implements the CRUD actions for Entity model.
+ * OrdController implements the CRUD actions for Ord model.
  */
-class EntityController extends Controller
+class OrdController extends Controller
 {
     public function behaviors()
     {
@@ -28,7 +28,7 @@ class EntityController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-camp', 'add-ord', 'add-product'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-order-line'],
                         'roles' => ['@']
                     ],
                     [
@@ -40,13 +40,13 @@ class EntityController extends Controller
     }
 
     /**
-     * Lists all Entity models.
+     * Lists all Ord models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Entity::find(),
+            'query' => Ord::find(),
         ]);
 
         return $this->render('index', [
@@ -55,38 +55,30 @@ class EntityController extends Controller
     }
 
     /**
-     * Displays a single Entity model.
+     * Displays a single Ord model.
      * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $providerCamp = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->camps,
-        ]);
-        $providerOrd = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->ords,
-        ]);
-        $providerProduct = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->products,
+        $providerOrderLine = new \yii\data\ArrayDataProvider([
+            'allModels' => $model->orderLines,
         ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'providerCamp' => $providerCamp,
-            'providerOrd' => $providerOrd,
-            'providerProduct' => $providerProduct,
+            'providerOrderLine' => $providerOrderLine,
         ]);
     }
 
     /**
-     * Creates a new Entity model.
+     * Creates a new Ord model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Entity();
+        $model = new Ord();
 
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -98,7 +90,7 @@ class EntityController extends Controller
     }
 
     /**
-     * Updates an existing Entity model.
+     * Updates an existing Ord model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -106,7 +98,7 @@ class EntityController extends Controller
     public function actionUpdate($id)
     {
         if (Yii::$app->request->post('_asnew') == '1') {
-            $model = new Entity();
+            $model = new Ord();
         }else{
             $model = $this->findModel($id);
         }
@@ -121,7 +113,7 @@ class EntityController extends Controller
     }
 
     /**
-     * Deletes an existing Entity model.
+     * Deletes an existing Ord model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -134,7 +126,7 @@ class EntityController extends Controller
     }
 
     /**
-    * Creates a new Entity model by another data,
+    * Creates a new Ord model by another data,
     * so user don't need to input all field from scratch.
     * If creation is successful, the browser will be redirected to the 'view' page.
     *
@@ -142,7 +134,7 @@ class EntityController extends Controller
     * @return mixed
     */
     public function actionSaveAsNew($id) {
-        $model = new Entity();
+        $model = new Ord();
 
         if (Yii::$app->request->post('_asnew') != '1') {
             $model = $this->findModel($id);
@@ -158,15 +150,15 @@ class EntityController extends Controller
     }
     
     /**
-     * Finds the Entity model based on its primary key value.
+     * Finds the Ord model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Entity the loaded model
+     * @return Ord the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Entity::findOne($id)) !== null) {
+        if (($model = Ord::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
@@ -175,68 +167,22 @@ class EntityController extends Controller
     
     /**
     * Action to load a tabular form grid
-    * for Camp
+    * for OrderLine
     * @author Yohanes Candrajaya <moo.tensai@gmail.com>
     * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
     *
     * @return mixed
     */
-    public function actionAddCamp()
+    public function actionAddOrderLine()
     {
         if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('Camp');
+            $row = Yii::$app->request->post('OrderLine');
             if (!empty($row)) {
                 $row = array_values($row);
             }
             if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
                 $row[] = [];
-            return $this->renderAjax('_formCamp', ['row' => $row]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-    
-    /**
-    * Action to load a tabular form grid
-    * for Ord
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAddOrd()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('Ord');
-            if (!empty($row)) {
-                $row = array_values($row);
-            }
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_formOrd', ['row' => $row]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-    
-    /**
-    * Action to load a tabular form grid
-    * for Product
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAddProduct()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('Product');
-            if (!empty($row)) {
-                $row = array_values($row);
-            }
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_formProduct', ['row' => $row]);
+            return $this->renderAjax('_formOrderLine', ['row' => $row]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

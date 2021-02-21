@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Entity */
+/* @var $model app\models\OrderLine */
 
-$this->title = 'Create Entity';
-$this->params['breadcrumbs'][] = ['label' => 'Entity', 'url' => ['index']];
+$this->title = 'Create Order Line';
+$this->params['breadcrumbs'][] = ['label' => 'Order Line', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="entity-create">
+<div class="order-line-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

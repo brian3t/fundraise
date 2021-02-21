@@ -1,14 +1,14 @@
 <?php
 
-use kartik\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Entity */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Entities', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Entity', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="entity-view">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <h2><?= 'Entity'.' '. Html::encode($this->title) ?></h2>
         </div>
         <div class="col-sm-4" style="margin-top: 15px">
-            <?= Html::a('Save As New', ['save-as-new', 'id' => $model->id], ['class' => 'btn btn-info']) ?>
+            <?= Html::a('Save As New', ['save-as-new', 'id' => $model->id], ['class' => 'btn btn-info']) ?>            
             <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
             <?= Html::a('Delete', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <div class="row">
-<?php
+<?php 
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
         'name',
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]);
 ?>
     </div>
-
+    
     <div class="row">
 <?php
 if($providerCamp->totalCount){
@@ -63,6 +63,7 @@ if($providerCamp->totalCount){
             'desc',
             'target',
             'note',
+            'created_by',
             'campdate',
                 ];
     echo Gridview::widget([
@@ -83,7 +84,7 @@ if($providerCamp->totalCount){
     <div class="row">
         <h4>User<?= ' '. Html::encode($this->title) ?></h4>
     </div>
-    <?php
+    <?php 
     $gridColumnUser = [
         ['attribute' => 'id', 'visible' => false],
         'username',
@@ -111,7 +112,7 @@ if($providerCamp->totalCount){
     <div class="row">
         <h4>User<?= ' '. Html::encode($this->title) ?></h4>
     </div>
-    <?php
+    <?php 
     $gridColumnUser = [
         ['attribute' => 'id', 'visible' => false],
         'username',
@@ -136,7 +137,45 @@ if($providerCamp->totalCount){
         'model' => $model->updatedBy,
         'attributes' => $gridColumnUser    ]);
     ?>
+    
+    <div class="row">
+<?php
+if($providerOrd->totalCount){
+    $gridColumnOrd = [
+        ['class' => 'yii\grid\SerialColumn'],
+            ['attribute' => 'id', 'visible' => false],
+            'last_synced_at',
+                        'order_number',
+            'spfid',
+            'spf_note',
+            'total_price',
+            'taxes_included',
+            'financial_status',
+            'confirmed',
+            'total_discounts',
+            'spf_name',
+            'app_id',
+            'fulfillment_status',
+            'tags',
+            'contact_email:email',
+            'order_status_url:url',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerOrd,
+        'pjax' => true,
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-ord']],
+        'panel' => [
+            'type' => GridView::TYPE_PRIMARY,
+            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Ord'),
+        ],
+        'export' => false,
+        'columns' => $gridColumnOrd
+    ]);
+}
+?>
 
+    </div>
+    
     <div class="row">
 <?php
 if($providerProduct->totalCount){

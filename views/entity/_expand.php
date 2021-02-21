@@ -18,6 +18,13 @@ $items = [
         ]),
     ],
                     [
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Ord'),
+        'content' => $this->render('_dataOrd', [
+            'model' => $model,
+            'row' => $model->ords,
+        ]),
+    ],
+            [
         'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Product'),
         'content' => $this->render('_dataProduct', [
             'model' => $model,

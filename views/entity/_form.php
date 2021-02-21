@@ -17,6 +17,14 @@ use yii\widgets\ActiveForm;
 ]);
 \mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
     'viewParams' => [
+        'class' => 'Ord', 
+        'relID' => 'ord', 
+        'value' => \yii\helpers\Json::encode($model->ords),
+        'isNewRecord' => ($model->isNewRecord) ? 1 : 0
+    ]
+]);
+\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
+    'viewParams' => [
         'class' => 'Product', 
         'relID' => 'product', 
         'value' => \yii\helpers\Json::encode($model->products),
@@ -61,6 +69,12 @@ use yii\widgets\ActiveForm;
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Camp'),
             'content' => $this->render('_formCamp', [
                 'row' => \yii\helpers\ArrayHelper::toArray($model->camps),
+            ]),
+        ],
+        [
+            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Ord'),
+            'content' => $this->render('_formOrd', [
+                'row' => \yii\helpers\ArrayHelper::toArray($model->ords),
             ]),
         ],
         [

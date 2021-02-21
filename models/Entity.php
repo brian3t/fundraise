@@ -2,7 +2,8 @@
 
 namespace app\models;
 
-use app\models\base\Entity as BaseEntity;
+use Yii;
+use \app\models\base\Entity as BaseEntity;
 
 /**
  * This is the model class for table "entity".
@@ -26,5 +27,5 @@ class Entity extends BaseEntity
             [['apikey', 'apipw'], 'string', 'max' => 64]
         ]);
     }
-
+	
 }

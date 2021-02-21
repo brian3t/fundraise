@@ -13,6 +13,7 @@ $dataProvider = new ArrayDataProvider([
         'desc',
         'target',
         'note',
+        'created_by',
         'campdate',
         [
             'class' => 'yii\grid\ActionColumn',

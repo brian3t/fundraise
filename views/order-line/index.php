@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
 
-$this->title = 'Entity';
+$this->title = 'Order Line';
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){
 	$('.search-form').toggle(1000);
@@ -15,12 +15,12 @@ $search = "$('.search-button').click(function(){
 });";
 $this->registerJs($search);
 ?>
-<div class="entity-index">
+<div class="order-line-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Entity', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Order Line', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 <?php 
     $gridColumn = [
@@ -38,29 +38,43 @@ $this->registerJs($search);
             'expandOneOnly' => true
         ],
         ['attribute' => 'id', 'visible' => false],
-        'name',
-        'note',
         [
-                'attribute' => 'owned_by',
-                'label' => 'Owned By',
+                'attribute' => 'order_id',
+                'label' => 'Order',
+                'value' => function($model){                   
+                    return $model->order->id;                   
+                },
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Ord::find()->asArray()->all(), 'id', 'id'),
+                'filterWidgetOptions' => [
+                    'pluginOptions' => ['allowClear' => true],
+                ],
+                'filterInputOptions' => ['placeholder' => 'Ord', 'id' => 'grid--order_id']
+            ],
+        [
+                'attribute' => 'product_id',
+                'label' => 'Product',
                 'value' => function($model){
-                    if ($model->ownedBy)
-                    {return $model->ownedBy->username;}
+                    if ($model->product)
+                    {return $model->product->title;}
                     else
                     {return NULL;}
                 },
                 'filterType' => GridView::FILTER_SELECT2,
-                'filter' => \yii\helpers\ArrayHelper::map(\app\models\User::find()->asArray()->all(), 'id', 'username'),
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Product::find()->asArray()->all(), 'id', 'title'),
                 'filterWidgetOptions' => [
                     'pluginOptions' => ['allowClear' => true],
                 ],
-                'filterInputOptions' => ['placeholder' => 'User', 'id' => 'grid--owned_by']
+                'filterInputOptions' => ['placeholder' => 'Product', 'id' => 'grid--product_id']
             ],
-        'platform',
-        'shopurl:url',
-        'apiver',
-        'apikey',
-        'apipw',
+        'spfid',
+        'variant_id',
+        'quantity',
+        'fulfillment_service',
+        'requires_shipping',
+        'price',
+        'total_discount',
+        'fulfillment_status',
         [
             'class' => 'yii\grid\ActionColumn',
             'template' => '{save-as-new} {view} {update} {delete}',
@@ -76,7 +90,7 @@ $this->registerJs($search);
         'dataProvider' => $dataProvider,
         'columns' => $gridColumn,
         'pjax' => true,
-        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-entity']],
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-order-line']],
         'panel' => [
             'type' => GridView::TYPE_PRIMARY,
             'heading' => '<span class="glyphicon glyphicon-book"></span>  ' . Html::encode($this->title),
