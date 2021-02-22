@@ -2,7 +2,7 @@
 
 namespace app\models\base;
 
-use yii\behaviors\BlameableBehavior;
+use Yii;
 
 /**
  * This is the base model class for table "product".
@@ -27,6 +27,7 @@ use yii\behaviors\BlameableBehavior;
  * @property string $fulfillment_service
  * @property string $inventory_quantity
  *
+ * @property \app\models\OrderLine[] $orderLines
  * @property \app\models\Entity $entity
  */
 class Product extends \yii\db\ActiveRecord
@@ -41,6 +42,7 @@ class Product extends \yii\db\ActiveRecord
     public function relationNames()
     {
         return [
+            'orderLines',
             'entity'
         ];
     }
@@ -97,7 +99,15 @@ class Product extends \yii\db\ActiveRecord
             'inventory_quantity' => 'Inventory Quantity',
         ];
     }
-
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOrderLines()
+    {
+        return $this->hasMany(\app\models\OrderLine::className(), ['product_id' => 'id'])->inverseOf('product');
+    }
+        
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -105,19 +115,4 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\Entity::className(), ['id' => 'entity_id'])->inverseOf('products');
     }
-
-    /**
-     * @inheritdoc
-     * @return array mixed
-     */
-    public function behaviors()
-    {
-        return [
-            'blameable' => [
-                'class' => BlameableBehavior::className(),
-                'createdByAttribute' => 'assigned_by',
-                'updatedByAttribute' => false,
-            ],
-        ];
     }
-}

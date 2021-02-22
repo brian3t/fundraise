@@ -19,6 +19,7 @@ use yii\widgets\DetailView;
 <?php
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
+        'last_synced_at',
         [
             'attribute' => 'order.id',
             'label' => 'Order',

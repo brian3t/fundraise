@@ -38,7 +38,7 @@ AppAsset::register($this);
 //            'class' => 'navbar navbar-nav navbar-default navbar-fixed-top',
         ],
     ]);
-    echo '<span class="version">v01.31</span>';
+    echo '<span class="version">v02.21</span>';
     $items = [];
     $admin_items = [
 

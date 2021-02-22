@@ -17,6 +17,18 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 
+    <?= $form->field($model, 'last_synced_at')->widget(\kartik\datecontrol\DateControl::classname(), [
+        'type' => \kartik\datecontrol\DateControl::FORMAT_DATETIME,
+        'saveFormat' => 'php:Y-m-d H:i:s',
+        'ajaxConversion' => true,
+        'options' => [
+            'pluginOptions' => [
+                'placeholder' => 'Choose Last Synced At',
+                'autoclose' => true,
+            ]
+        ],
+    ]); ?>
+
     <?= $form->field($model, 'order_id')->widget(\kartik\widgets\Select2::classname(), [
         'data' => \yii\helpers\ArrayHelper::map(\app\models\Ord::find()->orderBy('id')->asArray()->all(), 'id', 'id'),
         'options' => ['placeholder' => 'Choose Ord'],
@@ -47,7 +59,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'total_discount')->textInput(['maxlength' => true, 'placeholder' => 'Total Discount']) ?>
 
-    <?= $form->field($model, 'fulfillment_status')->textInput(['maxlength' => true, 'placeholder' => 'Fulfillment Status']) ?>
+    <?= $form->field($model, 'fulfillment_status')->dropDownList([ 'fulfilled' => 'Fulfilled', 'not_eligible' => 'Not eligible', 'partial' => 'Partial', '' => '', ], ['prompt' => '']) ?>
 
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>

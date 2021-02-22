@@ -42,3 +42,4 @@ web/scrape/ig_*.html
 /runtime/
 web/img/avatars/*
 web/uploads/avatar/*
+/b3/tools/*.sql

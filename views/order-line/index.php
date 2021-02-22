@@ -38,6 +38,7 @@ $this->registerJs($search);
             'expandOneOnly' => true
         ],
         ['attribute' => 'id', 'visible' => false],
+        'last_synced_at',
         [
                 'attribute' => 'order_id',
                 'label' => 'Order',
