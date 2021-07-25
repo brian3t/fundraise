@@ -6,6 +6,11 @@
 header('Content-Type: application/json');
 require_once('../../vendor/autoload.php');
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+const SMTP_DEBUG_LVL = SMTP::DEBUG_OFF;
+
 $act = $_REQUEST['act'] ?? ''; //action
 if (empty($act)) {
     echo '{Action required}';
@@ -20,40 +25,70 @@ $res['msg'] = 'testing';
 echo json_encode($res);
 */
 
-if ($act === 'mail'){
+/**
+ * Action mail
+ * Needs: to, subj, cont
+ * todo_future: Add a rate limit per IP
+ */
+if ($act === 'mail') {
+    require_once('conf.php');
+    $now = (new \DateTime())->format('Y-m-d h:i:s');
+
     $to = $_REQUEST['to'] ?? '';
     if (empty($to)) {
-        echo 'To required';
+        err('Missing `to`');
         die();
     }
-    require_once('conf.php');
-    /** @var $FROM string */
-    /** @var $FROM_NAME string */
-    /** @var $PW string */
+    $subj = $_REQUEST['subj'] ?? '';
+    if (empty($subj)) {
+        $subj = DEFAULT_SUB . " $now";
+    }
+    $cont = $_REQUEST['cont'] ?? '';
+    if (empty($cont)) {
+        $cont = "Email sent on $now via " . $_SERVER['SERVER_ADDR'] . " ; requested from " . $_SERVER['REMOTE_ADDR'];
+    }
 
-    // Create the Transport
-    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 587))
-        ->setUsername($FROM)
-        ->setPassword($PW)
-    ;
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->Mailer = "smtp";
 
-// Create the Mailer using your created Transport
-    $mailer = new Swift_Mailer($transport);
+    $mail->SMTPDebug = SMTP_DEBUG_LVL;
+    $mail->SMTPAuth = TRUE;
+    $mail->SMTPSecure = "tls";
+    $mail->Port = 587;
+    $mail->Host = "smtp.gmail.com";
+    $mail->Username = FROM;
+    $mail->Password = PW;
 
-// Create a message
-    $message = (new Swift_Message('Wonderful Subject'))
-        ->setFrom([$FROM => $FROM_NAME])
-        ->setTo([$to])
-        ->setBody('Here is the message itself')
-    ;
+    $mail->IsHTML(true);
+    $mail->AddAddress($to, $to);
+    $mail->SetFrom(FROM, FROM_NAME);
+    $mail->AddBcc("someids@gmail.com", "admin monitor");//asdf
+    $mail->Subject = $subj;
 
 // Send the message
     try {
-        $result = $mailer->send($message);
+        $mail->MsgHTML($cont);
+        if (! $mail->Send()) {
+            err($mail);
+        } else {
+            succ("Email sent successfully");
+        }
+    } catch (\Exception $e) {
+        err($e->getMessage());
     }
-    catch (\Exception $e){
-        echo $e->getMessage();
-    }
-    $a=1;
+    $a = 1;
 
+}
+
+function err($err_msg) {
+    http_response_code(400);
+    if (! is_string($err_msg)) $err_msg = json_encode($err_msg);
+    echo json_encode(['msg' => $err_msg, 'stat' => -1]);
+}
+
+function succ($msg) {
+    http_response_code(200);
+    if (! is_string($msg)) $msg = json_encode($msg);
+    echo json_encode(['msg' => $msg, 'stat' => 1]);
 }

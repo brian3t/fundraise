@@ -119,6 +119,9 @@
       <excludeFolder url="file://$MODULE_DIR$/web/assets" />
       <excludeFolder url="file://$MODULE_DIR$/web/dashorig" />
       <excludeFolder url="file://$MODULE_DIR$/yii2helper/.idea/inspectionProfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

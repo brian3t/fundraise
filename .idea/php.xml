@@ -133,6 +133,9 @@
       <path value="$PROJECT_DIR$/vendor/bower/jquery" />
       <path value="$PROJECT_DIR$/vendor/bower/microplugin" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap__" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
