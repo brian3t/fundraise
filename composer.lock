@@ -61,10 +61,6 @@
                 "yii 2",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/2amigos/yii2-selectize-widget/issues",
-                "source": "https://github.com/2amigos/yii2-selectize-widget/tree/master"
-            },
             "time": "2017-09-19T22:02:33+00:00"
         },
         {
@@ -152,11 +148,6 @@
                 "yii2 user",
                 "yii2-user"
             ],
-            "support": {
-                "forum": "https://gitter.im/2amigos/yii2-usuario",
-                "issues": "https://github.com/2amigos/yii2-usuario/issues?state=open",
-                "source": "https://github.com/2amigos/yii2-usuario"
-            },
             "time": "2020-04-05T11:59:36+00:00"
         },
         {
@@ -203,16 +194,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "3.6.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
+                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/e786e3d9707ffd9b0dd330ca135b66344dcef85a",
-                "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
+                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "type": "bower-asset",
             "license": [
@@ -421,7 +412,6 @@
             "require-dev": {
                 "phpunit/phpunit": "3.7.*"
             },
-            "default-branch": true,
             "bin": [
                 "bin/markdown-latex"
             ],
@@ -458,10 +448,6 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "support": {
-                "issues": "https://github.com/cebe/markdown-latex/issues",
-                "source": "https://github.com/cebe/markdown-latex"
-            },
             "time": "2019-05-21T16:01:49+00:00"
         },
         {
@@ -514,10 +500,6 @@
                 "stream_filter_append",
                 "stream_filter_register"
             ],
-            "support": {
-                "issues": "https://github.com/clue/stream-filter/issues",
-                "source": "https://github.com/clue/stream-filter/tree/v1.5.0"
-            },
             "funding": [
                 {
                     "url": "https://clue.engineering/support",
@@ -544,7 +526,6 @@
                 "reference": "66dc7ba0805fa2fe28c39dbbcf5a84d476d2ab72",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "component",
             "extra": {
                 "component": {
@@ -567,10 +548,6 @@
                 }
             ],
             "description": "CSS for vector based country flags",
-            "support": {
-                "issues": "https://github.com/lipis/flag-icon-css/issues",
-                "source": "https://github.com/lipis/flag-icon-css/tree/master"
-            },
             "time": "2021-07-23T02:16:02+00:00"
         },
         {
@@ -594,7 +571,6 @@
                 "phpunit/dbunit": "~1.0",
                 "phpunit/phpunit": "~4.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -616,10 +592,6 @@
                 "nested sets",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/creocoder/yii2-nested-sets/issues",
-                "source": "https://github.com/creocoder/yii2-nested-sets/tree/master"
-            },
             "time": "2017-01-31T09:48:06+00:00"
         },
         {
@@ -677,10 +649,6 @@
                 "parser",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.3.x"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -699,36 +667,35 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307"
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c81f18a3efb941d8c4d2e025f6183b5c6d697307",
-                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "^1.2",
-                "php": ">=7.2",
-                "symfony/polyfill-intl-idn": "^1.15"
+                "doctrine/lexer": "^1.0.1",
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.10"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "^2.2",
-                "phpunit/phpunit": "^8.5.8|^9.3.3",
-                "vimeo/psalm": "^4"
+                "dominicsayers/isemail": "^3.0.7",
+                "phpunit/phpunit": "^4.8.36|^7.5.15",
+                "satooshi/php-coveralls": "^1.0.1"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
@@ -754,17 +721,13 @@
                 "validation",
                 "validator"
             ],
-            "support": {
-                "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.1.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/egulias",
                     "type": "github"
                 }
             ],
-            "time": "2021-04-01T18:37:14+00:00"
+            "time": "2020-12-29T14:50:06+00:00"
         },
         {
             "name": "electrolinux/phpquery",
@@ -804,9 +767,6 @@
             ],
             "description": "phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library",
             "homepage": "http://code.google.com/p/phpquery/",
-            "support": {
-                "source": "https://github.com/electrolinux/phpquery/tree/0.9.6"
-            },
             "time": "2013-03-21T12:39:33+00:00"
         },
         {
@@ -857,10 +817,6 @@
             "keywords": [
                 "html"
             ],
-            "support": {
-                "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/master"
-            },
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
@@ -900,7 +856,6 @@
                 "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -944,10 +899,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -988,7 +939,6 @@
             "require-dev": {
                 "symfony/phpunit-bridge": "^4.4 || ^5.1"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1018,10 +968,6 @@
             "keywords": [
                 "promise"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.4.1"
-            },
             "time": "2021-03-07T09:25:29+00:00"
         },
         {
@@ -1056,7 +1002,6 @@
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1099,10 +1044,6 @@
                 "uri",
                 "url"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.0.0"
-            },
             "time": "2021-06-30T20:03:07+00:00"
         },
         {
@@ -1111,15 +1052,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "0fc488a50e217a027fa30258a9a8c04072499c26"
+                "reference": "a3340fd757a2a46fdeede677e366fce2e4f89d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/0fc488a50e217a027fa30258a9a8c04072499c26",
-                "reference": "0fc488a50e217a027fa30258a9a8c04072499c26",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/a3340fd757a2a46fdeede677e366fce2e4f89d3a",
+                "reference": "a3340fd757a2a46fdeede677e366fce2e4f89d3a",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1157,17 +1097,13 @@
                 "progress",
                 "upload"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/bootstrap-fileinput/issues",
-                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap-fileinput",
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-07-22T09:40:41+00:00"
+            "time": "2021-07-25T06:58:43+00:00"
         },
         {
             "name": "kartik-v/bootstrap-popover-x",
@@ -1183,7 +1119,6 @@
                 "reference": "f4fe716e4bacbd6aff4d9151ea01e9fd5b5d36c0",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1217,10 +1152,6 @@
                 "popover",
                 "popover-x"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/bootstrap-popover-x/issues",
-                "source": "https://github.com/kartik-v/bootstrap-popover-x/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap-popover-x",
@@ -1235,15 +1166,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "40dab25d947562bd0982053e1773495644134897"
+                "reference": "5b53222d326b951d1fff0f55bd593dcb17ff941f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/40dab25d947562bd0982053e1773495644134897",
-                "reference": "40dab25d947562bd0982053e1773495644134897",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/5b53222d326b951d1fff0f55bd593dcb17ff941f",
+                "reference": "5b53222d326b951d1fff0f55bd593dcb17ff941f",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1272,17 +1202,13 @@
                 "star",
                 "svg"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/bootstrap-star-rating/issues",
-                "source": "https://github.com/kartik-v/bootstrap-star-rating/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap-star-rating",
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-05-25T21:12:20+00:00"
+            "time": "2021-07-25T06:04:15+00:00"
         },
         {
             "name": "kartik-v/bootstrap-tabs-x",
@@ -1298,7 +1224,6 @@
                 "reference": "b6945aa163a1943b212b217b443086ae5b0e503e",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1352,7 +1277,6 @@
                 "reference": "c9e0b2b5b58ad717842396053804f8d0281df1ae",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1384,10 +1308,6 @@
                 "option",
                 "select"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/dependent-dropdown/issues",
-                "source": "https://github.com/kartik-v/dependent-dropdown/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/dependent-dropdown",
@@ -1410,7 +1330,6 @@
                 "reference": "514a53660b0d69439236fd3cbc3f41512adb00a0",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1444,10 +1363,6 @@
                 "php-date-formatter.js",
                 "time"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/php-date-formatter/issues",
-                "source": "https://github.com/kartik-v/php-date-formatter/tree/v1.3.6"
-            },
             "time": "2020-04-14T10:16:32+00:00"
         },
         {
@@ -1470,7 +1385,6 @@
             "suggest": {
                 "yiisoft/yii2-bootstrap4": "The Yii 2 Bootstrap 4 extension must be installed separately for this extension to work."
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1503,10 +1417,6 @@
                 "submenu",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-bootstrap4-dropdown/issues",
-                "source": "https://github.com/kartik-v/yii2-bootstrap4-dropdown/tree/v1.0.1"
-            },
             "time": "2020-03-27T10:45:23+00:00"
         },
         {
@@ -1528,7 +1438,6 @@
                 "kartik-v/yii2-helpers": ">=1.3.8",
                 "kartik-v/yii2-widget-activeform": ">=1.5.6"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1560,10 +1469,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-builder/issues",
-                "source": "https://github.com/kartik-v/yii2-builder/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/kartik-v",
@@ -1589,7 +1494,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1625,10 +1529,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-date-range/issues",
-                "source": "https://github.com/kartik-v/yii2-date-range/tree/master"
-            },
             "time": "2020-07-20T09:51:58+00:00"
         },
         {
@@ -1649,7 +1549,6 @@
                 "kartik-v/php-date-formatter": ">1.3",
                 "kartik-v/yii2-krajee-base": ">=1.9"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1682,10 +1581,6 @@
                 "yii",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-datecontrol/issues",
-                "source": "https://github.com/kartik-v/yii2-datecontrol/tree/v1.9.8"
-            },
             "time": "2021-06-12T11:11:36+00:00"
         },
         {
@@ -1705,7 +1600,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1738,10 +1632,6 @@
                 "modal",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-dialog/issues",
-                "source": "https://github.com/kartik-v/yii2-dialog/tree/master"
-            },
             "time": "2021-06-02T17:48:36+00:00"
         },
         {
@@ -1764,7 +1654,6 @@
                 "kartik-v/yii2-widget-activeform": "~1.4",
                 "kartik-v/yii2-widget-select2": "~2.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1803,10 +1692,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-dynagrid/issues",
-                "source": "https://github.com/kartik-v/yii2-dynagrid/tree/master"
-            },
             "time": "2019-05-25T07:10:50+00:00"
         },
         {
@@ -1827,7 +1712,6 @@
                 "kartik-v/yii2-popover-x": "~1.3",
                 "kartik-v/yii2-widget-activeform": ">=1.5.7"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1861,10 +1745,6 @@
                 "popover-x",
                 "widget"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-editable/issues",
-                "source": "https://github.com/kartik-v/yii2-editable/tree/master"
-            },
             "time": "2020-11-27T14:23:42+00:00"
         },
         {
@@ -1886,7 +1766,6 @@
                 "kartik-v/yii2-mpdf": ">=1.0",
                 "phpoffice/phpspreadsheet": ">=1.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1926,10 +1805,6 @@
                 "xlsx",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-export/issues",
-                "source": "https://github.com/kartik-v/yii2-export/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-export",
@@ -1956,7 +1831,6 @@
                 "kartik-v/yii2-helpers": ">=1.3.9",
                 "kartik-v/yii2-widget-activeform": ">=1.5.7"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -1995,10 +1869,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-field-range/issues",
-                "source": "https://github.com/kartik-v/yii2-field-range/tree/v1.3.5"
-            },
             "time": "2019-05-25T07:21:55+00:00"
         },
         {
@@ -2022,7 +1892,6 @@
             "suggest": {
                 "kartik-v/yii2-mpdf": "For exporting grids to PDF"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2053,10 +1922,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-grid/issues",
-                "source": "https://github.com/kartik-v/yii2-grid/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-grid",
@@ -2082,7 +1947,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2115,10 +1979,6 @@
                 "yii",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-helpers/issues",
-                "source": "https://github.com/kartik-v/yii2-helpers/tree/master"
-            },
             "time": "2020-06-30T06:07:57+00:00"
         },
         {
@@ -2140,7 +2000,6 @@
                 "kartik-v/yii2-krajee-base": ">=1.9",
                 "yiisoft/yii2-jui": "*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2172,10 +2031,6 @@
                 "yii",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-icons/issues",
-                "source": "https://github.com/kartik-v/yii2-icons/tree/v1.4.7"
-            },
             "time": "2021-04-08T09:12:30+00:00"
         },
         {
@@ -2196,7 +2051,6 @@
                 "yiisoft/yii2-bootstrap": "for Krajee extensions to work with Bootstrap 3.x version",
                 "yiisoft/yii2-bootstrap4": "for Krajee extensions to work with Bootstrap 4.x version"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2229,10 +2083,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-krajee-base/issues",
-                "source": "https://github.com/kartik-v/yii2-krajee-base/tree/v2.0.6"
-            },
             "time": "2021-04-08T18:07:22+00:00"
         },
         {
@@ -2285,10 +2135,6 @@
                 "utf8",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-mpdf/issues",
-                "source": "https://github.com/kartik-v/yii2-mpdf/tree/master"
-            },
             "time": "2017-01-14T11:51:12+00:00"
         },
         {
@@ -2309,7 +2155,6 @@
                 "kartik-v/bootstrap-popover-x": ">=1.4",
                 "kartik-v/yii2-krajee-base": ">=2.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2343,10 +2188,6 @@
                 "popover",
                 "popover-x"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-popover-x/issues",
-                "source": "https://github.com/kartik-v/yii2-popover-x/tree/v1.3.5"
-            },
             "time": "2020-04-02T17:20:29+00:00"
         },
         {
@@ -2366,7 +2207,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2400,10 +2240,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-sortable/issues",
-                "source": "https://github.com/kartik-v/yii2-sortable/tree/master"
-            },
             "time": "2019-05-25T07:28:12+00:00"
         },
         {
@@ -2424,7 +2260,6 @@
                 "kartik-v/bootstrap-tabs-x": "~1.3",
                 "kartik-v/yii2-krajee-base": ">=1.9.8"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2458,10 +2293,6 @@
                 "tabs",
                 "tabs-x"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-tabs-x/issues",
-                "source": "https://github.com/kartik-v/yii2-tabs-x/tree/master"
-            },
             "time": "2021-01-12T02:30:29+00:00"
         },
         {
@@ -2483,7 +2314,6 @@
                 "kartik-v/yii2-dialog": ">=1.0",
                 "kartik-v/yii2-widget-activeform": ">=1.5.7"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2520,10 +2350,6 @@
                 "tree",
                 "treeview"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-tree-manager/issues",
-                "source": "https://github.com/kartik-v/yii2-tree-manager/tree/master"
-            },
             "time": "2021-06-03T09:48:41+00:00"
         },
         {
@@ -2543,7 +2369,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=1.9.8"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2577,10 +2402,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-activeform/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-activeform/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-widgets",
@@ -2606,7 +2427,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": "*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -2637,10 +2457,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-affix/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-affix/tree/master"
-            },
             "time": "2018-02-07T11:46:39+00:00"
         },
         {
@@ -2660,7 +2476,6 @@
             "require": {
                 "kartik-v/yii2-widget-growl": ">=1.1.2"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2720,7 +2535,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=1.9"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2756,10 +2570,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-colorinput/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-colorinput/tree/v1.0.6"
-            },
             "time": "2020-10-23T17:50:44+00:00"
         },
         {
@@ -2779,7 +2589,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2815,10 +2624,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-datepicker/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-datepicker/tree/master"
-            },
             "time": "2020-12-29T09:25:58+00:00"
         },
         {
@@ -2838,7 +2643,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2874,10 +2678,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-datetimepicker/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-datetimepicker/tree/master"
-            },
             "time": "2020-09-11T13:24:42+00:00"
         },
         {
@@ -2898,7 +2698,6 @@
                 "kartik-v/dependent-dropdown": "~1.4",
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2933,10 +2732,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-depdrop/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-depdrop/tree/master"
-            },
             "time": "2019-05-25T07:32:15+00:00"
         },
         {
@@ -2957,7 +2752,6 @@
                 "kartik-v/bootstrap-fileinput": ">=5.0.0",
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -2993,10 +2787,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-fileinput/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-fileinput/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-widget-fileinput",
@@ -3022,7 +2812,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3058,10 +2847,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-growl/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-growl/tree/v1.1.2"
-            },
             "time": "2021-05-19T12:44:49+00:00"
         },
         {
@@ -3081,7 +2866,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=1.9"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3117,10 +2901,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-rangeinput/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-rangeinput/tree/master"
-            },
             "time": "2018-11-05T12:34:11+00:00"
         },
         {
@@ -3141,7 +2921,6 @@
                 "kartik-v/bootstrap-star-rating": "~4.0",
                 "kartik-v/yii2-krajee-base": ">=1.9"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3178,10 +2957,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-rating/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-rating/tree/master"
-            },
             "time": "2018-11-05T12:34:24+00:00"
         },
         {
@@ -3202,7 +2977,6 @@
                 "kartik-v/yii2-krajee-base": ">=1.9",
                 "select2/select2": ">=4.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3237,10 +3011,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-select2/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-select2/tree/v2.2.1"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-widget-select2",
@@ -3266,7 +3036,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": "*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3302,10 +3071,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-sidenav/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-sidenav/tree/v1.0.1"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/yii2-widget-sidenav",
@@ -3331,7 +3096,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3366,10 +3130,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-spinner/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-spinner/tree/master"
-            },
             "time": "2019-05-25T07:33:33+00:00"
         },
         {
@@ -3389,7 +3149,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": "*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -3421,10 +3180,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-switchinput/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-switchinput/tree/master"
-            },
             "time": "2018-02-07T11:45:58+00:00"
         },
         {
@@ -3444,7 +3199,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3480,10 +3234,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-timepicker/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-timepicker/tree/master"
-            },
             "time": "2019-05-25T07:33:17+00:00"
         },
         {
@@ -3503,7 +3253,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=1.9"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3540,10 +3289,6 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-touchspin/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-touchspin/tree/master"
-            },
             "time": "2019-05-25T07:33:04+00:00"
         },
         {
@@ -3563,7 +3308,6 @@
             "require": {
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -3598,24 +3342,20 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-typeahead/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-typeahead/tree/v1.0.4"
-            },
             "time": "2019-05-29T12:06:56+00:00"
         },
         {
             "name": "kartik-v/yii2-widgets",
-            "version": "v3.4.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widgets.git",
-                "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3"
+                "reference": "0674838c869e5ccabc15756ee0c065ccecd09969"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widgets/zipball/e5a030d700243a90eccf96a070380bd3b76e17a3",
-                "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widgets/zipball/0674838c869e5ccabc15756ee0c065ccecd09969",
+                "reference": "0674838c869e5ccabc15756ee0c065ccecd09969",
                 "shasum": ""
             },
             "require": {
@@ -3669,11 +3409,13 @@
                 "widget",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/kartik-v/yii2-widgets/issues",
-                "source": "https://github.com/kartik-v/yii2-widgets/tree/master"
-            },
-            "time": "2018-10-09T17:40:19+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/yii2-widgets",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2019-09-03T03:11:11+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -3734,10 +3476,6 @@
                 "stream",
                 "zip"
             ],
-            "support": {
-                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
-                "source": "https://github.com/maennchen/ZipStream-PHP/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/zipstream",
@@ -3791,10 +3529,6 @@
                 "complex",
                 "mathematics"
             ],
-            "support": {
-                "issues": "https://github.com/MarkBaker/PHPComplex/issues",
-                "source": "https://github.com/MarkBaker/PHPComplex/tree/3.0"
-            },
             "time": "2021-06-29T15:32:53+00:00"
         },
         {
@@ -3847,10 +3581,6 @@
                 "matrix",
                 "vector"
             ],
-            "support": {
-                "issues": "https://github.com/MarkBaker/PHPMatrix/issues",
-                "source": "https://github.com/MarkBaker/PHPMatrix/tree/3.0"
-            },
             "time": "2021-07-01T18:43:50+00:00"
         },
         {
@@ -3890,10 +3620,6 @@
                 }
             ],
             "description": "A converter class that converts normal ASCII text to valid LaTeX",
-            "support": {
-                "issues": "https://github.com/mvriel/TextToLatex/issues",
-                "source": "https://github.com/mvriel/TextToLatex/tree/master"
-            },
             "time": "2015-12-13T07:33:35+00:00"
         },
         {
@@ -3922,7 +3648,6 @@
                 "mootensai/yii2-uuid-behavior": "*",
                 "yiisoft/yii2": ">=2.0.38"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "bootstrap": "mootensai\\enhancedgii\\Bootstrap"
@@ -3954,10 +3679,6 @@
                 "yii",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/mootensai/yii2-enhanced-gii/issues",
-                "source": "https://github.com/mootensai/yii2-enhanced-gii/tree/master"
-            },
             "time": "2021-03-08T04:19:13+00:00"
         },
         {
@@ -3978,7 +3699,6 @@
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "~2.0"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -4002,10 +3722,6 @@
                 "javascript",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/mootensai/yii2-jsblock/issues",
-                "source": "https://github.com/mootensai/yii2-jsblock"
-            },
             "time": "2015-07-10T13:30:34+00:00"
         },
         {
@@ -4025,7 +3741,6 @@
             "require": {
                 "yiisoft/yii2": "*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -4055,10 +3770,6 @@
                 "yii",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/mootensai/yii2-optimistic-lock-validator/issues",
-                "source": "https://github.com/mootensai/yii2-optimistic-lock-validator/tree/0.0.1"
-            },
             "time": "2015-08-15T03:27:57+00:00"
         },
         {
@@ -4079,7 +3790,6 @@
                 "php": ">=5.4.0",
                 "yiisoft/yii2": ">=2.0.38"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -4110,10 +3820,6 @@
                 "transaction",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/mootensai/yii2-relation-trait/issues",
-                "source": "https://github.com/mootensai/yii2-relation-trait"
-            },
             "time": "2020-09-16T12:06:02+00:00"
         },
         {
@@ -4133,7 +3839,6 @@
             "require": {
                 "php": ">=5.4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4170,10 +3875,6 @@
                 "uuid",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/mootensai/yii2-uuid-behavior/issues",
-                "source": "https://github.com/mootensai/yii2-uuid-behavior/tree/master"
-            },
             "time": "2016-03-01T08:50:04+00:00"
         },
         {
@@ -4225,11 +3926,6 @@
                 "php",
                 "utf-8"
             ],
-            "support": {
-                "docs": "http://mpdf.github.io",
-                "issues": "https://github.com/mpdf/mpdf/issues",
-                "source": "https://github.com/mpdf/mpdf"
-            },
             "time": "2016-12-12T10:42:18+00:00"
         },
         {
@@ -4276,10 +3972,6 @@
             "keywords": [
                 "enum"
             ],
-            "support": {
-                "issues": "https://github.com/myclabs/php-enum/issues",
-                "source": "https://github.com/myclabs/php-enum/tree/1.8.3"
-            },
             "funding": [
                 {
                     "url": "https://github.com/mnapoli",
@@ -4306,7 +3998,7 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.11.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
@@ -4372,10 +4064,6 @@
                 "message",
                 "psr-7"
             ],
-            "support": {
-                "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.11.1"
-            },
             "time": "2021-05-24T18:11:08+00:00"
         },
         {
@@ -4396,7 +4084,6 @@
                 "php": ">=5.4",
                 "psr/http-message": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4427,10 +4114,6 @@
                 "stream",
                 "uri"
             ],
-            "support": {
-                "issues": "https://github.com/php-http/message-factory/issues",
-                "source": "https://github.com/php-http/message-factory/tree/master"
-            },
             "time": "2018-12-06T18:41:41+00:00"
         },
         {
@@ -4471,7 +4154,6 @@
                 "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
                 "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4500,10 +4182,6 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "support": {
-                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://github.com/Synchro",
@@ -4518,12 +4196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "3c5750bddc959f3219aba78287bd88ef95a148ea"
+                "reference": "51163713c700eb8b03ce5a49615e98f8c7485619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/3c5750bddc959f3219aba78287bd88ef95a148ea",
-                "reference": "3c5750bddc959f3219aba78287bd88ef95a148ea",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/51163713c700eb8b03ce5a49615e98f8c7485619",
+                "reference": "51163713c700eb8b03ce5a49615e98f8c7485619",
                 "shasum": ""
             },
             "require": {
@@ -4568,7 +4246,6 @@
                 "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
                 "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer (doesn't yet support PHP8)"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4611,11 +4288,7 @@
                 "xls",
                 "xlsx"
             ],
-            "support": {
-                "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/master"
-            },
-            "time": "2021-07-22T18:01:25+00:00"
+            "time": "2021-07-25T03:44:04+00:00"
         },
         {
             "name": "psr/http-client",
@@ -4635,7 +4308,6 @@
                 "php": "^7.0 || ^8.0",
                 "psr/http-message": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4665,9 +4337,6 @@
                 "psr",
                 "psr-18"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-client/tree/master"
-            },
             "time": "2020-09-19T09:12:31+00:00"
         },
         {
@@ -4688,7 +4357,6 @@
                 "php": ">=7.0.0",
                 "psr/http-message": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4721,9 +4389,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/master"
-            },
             "time": "2020-09-17T16:52:55+00:00"
         },
         {
@@ -4743,7 +4408,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4797,7 +4461,6 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4870,27 +4533,22 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "support": {
-                "issues": "https://github.com/ralouphie/getallheaders/issues",
-                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
-            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "select2/select2",
-            "version": "dev-develop",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/select2/select2.git",
-                "reference": "1176368f92afda6b4918518fe3cf80bc02d30d16"
+                "url": "git@github.com:select2/select2.git",
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/1176368f92afda6b4918518fe3cf80bc02d30d16",
-                "reference": "1176368f92afda6b4918518fe3cf80bc02d30d16",
+                "url": "https://api.github.com/repos/select2/select2/zipball/9ce61fd297fd2922fe771debea8b24dfd219a49a",
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "component",
             "extra": {
                 "component": {
@@ -4913,21 +4571,7 @@
             ],
             "description": "Select2 is a jQuery based replacement for select boxes.",
             "homepage": "https://select2.org/",
-            "support": {
-                "issues": "https://github.com/select2/select2/issues",
-                "source": "https://github.com/select2/select2/tree/develop"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/kevin-brown",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/select2",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2021-06-10T01:47:24+00:00"
+            "time": "2021-01-23T04:36:25+00:00"
         },
         {
             "name": "setasign/fpdi",
@@ -4976,10 +4620,6 @@
                 "fpdi",
                 "pdf"
             ],
-            "support": {
-                "issues": "https://github.com/Setasign/FPDI/issues",
-                "source": "https://github.com/Setasign/FPDI/tree/master"
-            },
             "time": "2017-05-11T14:25:49+00:00"
         },
         {
@@ -5010,7 +4650,6 @@
             "suggest": {
                 "ext-intl": "Needed to support internationalized email addresses"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5042,10 +4681,6 @@
                 "mail",
                 "mailer"
             ],
-            "support": {
-                "issues": "https://github.com/swiftmailer/swiftmailer/issues",
-                "source": "https://github.com/swiftmailer/swiftmailer/tree/master"
-            },
             "funding": [
                 {
                     "url": "https://github.com/fabpot",
@@ -5075,7 +4710,6 @@
             "require": {
                 "php": ">=7.1"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5107,9 +4741,6 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/main"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5146,7 +4777,6 @@
             "suggest": {
                 "ext-iconv": "For best performance"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5188,9 +4818,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.23.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5229,7 +4856,6 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5276,9 +4902,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.23.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5315,7 +4938,6 @@
             "suggest": {
                 "ext-intl": "For best performance"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5361,9 +4983,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.23.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5400,7 +5019,6 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5442,9 +5060,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/main"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5478,7 +5093,6 @@
             "require": {
                 "php": ">=7.1"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5519,9 +5133,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.23.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5558,7 +5169,6 @@
             "require-dev": {
                 "phpunit/phpunit": "5.5.*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -5586,10 +5196,6 @@
                 "rest",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/tuyakhov/yii2-json-api/issues",
-                "source": "https://github.com/tuyakhov/yii2-json-api"
-            },
             "time": "2020-06-21T13:53:16+00:00"
         },
         {
@@ -5647,10 +5253,6 @@
                 "relation",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/voskobovich/ManyToManyBehavior/issues",
-                "source": "https://github.com/voskobovich/ManyToManyBehavior"
-            },
             "time": "2016-07-27T21:24:35+00:00"
         },
         {
@@ -5673,7 +5275,6 @@
             "require-dev": {
                 "phpunit/phpunit": "5.*"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
@@ -5703,10 +5304,6 @@
                 "yii 2",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://github.com/vova07/yii2-console-runner-extension/issues?state=open",
-                "source": "https://github.com/vova07/yii2-console-runner-extension"
-            },
             "time": "2018-01-20T17:10:40+00:00"
         },
         {
@@ -5715,12 +5312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "20437152d66e9d263d94d5c7fdbdd69edb0358c4"
+                "reference": "3da50c3c9de55b73ba8308826863f21481b10e5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/20437152d66e9d263d94d5c7fdbdd69edb0358c4",
-                "reference": "20437152d66e9d263d94d5c7fdbdd69edb0358c4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/3da50c3c9de55b73ba8308826863f21481b10e5c",
+                "reference": "3da50c3c9de55b73ba8308826863f21481b10e5c",
                 "shasum": ""
             },
             "require": {
@@ -5736,7 +5333,6 @@
                 "php": ">=5.4.0",
                 "yiisoft/yii2-composer": "~2.0.4"
             },
-            "default-branch": true,
             "bin": [
                 "yii"
             ],
@@ -5808,13 +5404,6 @@
                 "framework",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-                "source": "https://github.com/yiisoft/yii2",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -5829,7 +5418,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-08T07:30:32+00:00"
+            "time": "2021-07-25T13:44:56+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -5900,13 +5489,6 @@
                 "oauth",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-authclient/issues",
-                "source": "https://github.com/yiisoft/yii2-authclient",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -5945,7 +5527,6 @@
                 "cweagans/composer-patches": "^1.7",
                 "phpunit/phpunit": "4.8.34"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -5995,13 +5576,6 @@
                 "bootstrap",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-bootstrap/issues",
-                "source": "https://github.com/yiisoft/yii2-bootstrap",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6095,13 +5669,6 @@
                 "bootstrap4",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-bootstrap4/issues",
-                "source": "https://github.com/yiisoft/yii2-bootstrap4",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6139,7 +5706,6 @@
                 "composer/composer": "^1.0 | ^2.0@dev",
                 "phpunit/phpunit": "<7"
             },
-            "default-branch": true,
             "type": "composer-plugin",
             "extra": {
                 "class": "yii\\composer\\Plugin",
@@ -6216,7 +5782,6 @@
                 "cweagans/composer-patches": "^1.7",
                 "phpunit/phpunit": "4.8.34"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -6255,13 +5820,6 @@
                 "httpclient",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-httpclient/issues",
-                "source": "https://github.com/yiisoft/yii2-httpclient",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6300,7 +5858,6 @@
                 "cweagans/composer-patches": "^1.7",
                 "phpunit/phpunit": "4.8.34"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -6349,13 +5906,6 @@
                 "jQuery UI",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-jui/issues",
-                "source": "https://github.com/yiisoft/yii2-jui",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6394,7 +5944,6 @@
                 "cweagans/composer-patches": "^1.7",
                 "phpunit/phpunit": "4.8.34"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -6435,13 +5984,6 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-swiftmailer/issues",
-                "source": "https://github.com/yiisoft/yii2-swiftmailer",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6493,7 +6035,6 @@
                 "ext-iconv": "Required by Faker\\Provider\\ru_RU\\Text::realText() for generating real Russian text.",
                 "ext-mbstring": "Required for multibyte Unicode string functionality."
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -6520,10 +6061,6 @@
                 "faker",
                 "fixtures"
             ],
-            "support": {
-                "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/main"
-            },
             "time": "2021-07-22T11:49:59+00:00"
         },
         {
@@ -6547,7 +6084,6 @@
                 "jeremeamia/superclosure": "^2.0",
                 "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -6586,10 +6122,6 @@
                 "serialization",
                 "serialize"
             ],
-            "support": {
-                "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.2"
-            },
             "time": "2021-04-09T13:42:10+00:00"
         },
         {
@@ -6628,9 +6160,6 @@
                 }
             ],
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
-            "support": {
-                "source": "https://github.com/phpspec/php-diff/tree/v1.1.3"
-            },
             "time": "2020-09-18T13:47:07+00:00"
         },
         {
@@ -6675,24 +6204,20 @@
                 "container-interop",
                 "psr"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/1.1.x"
-            },
             "time": "2021-03-05T17:36:06+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.17",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "21a259c27dacedf19ac1e00d4a7180e3043d7859"
+                "reference": "8c6b8b100ec9a510b252a1cb293dbeab216c555e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/21a259c27dacedf19ac1e00d4a7180e3043d7859",
-                "reference": "21a259c27dacedf19ac1e00d4a7180e3043d7859",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/8c6b8b100ec9a510b252a1cb293dbeab216c555e",
+                "reference": "8c6b8b100ec9a510b252a1cb293dbeab216c555e",
                 "shasum": ""
             },
             "require": {
@@ -6748,13 +6273,6 @@
                 "debugger",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-debug/issues",
-                "source": "https://github.com/yiisoft/yii2-debug",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6769,7 +6287,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-05T22:02:36+00:00"
+            "time": "2021-05-05T22:08:13+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -6793,7 +6311,6 @@
                 "cweagans/composer-patches": "^1.7",
                 "phpunit/phpunit": "4.8.34"
             },
-            "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
@@ -6831,13 +6348,6 @@
                 "faker",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-faker/issues",
-                "source": "https://github.com/yiisoft/yii2-faker",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6856,16 +6366,16 @@
         },
         {
             "name": "yiisoft/yii2-gii",
-            "version": "2.2.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "68efc6fb830feccfaa43354817b5bcd36c7bd5a8"
+                "reference": "6b40893f87c1dd970896ced6c198ff2416df353e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/68efc6fb830feccfaa43354817b5bcd36c7bd5a8",
-                "reference": "68efc6fb830feccfaa43354817b5bcd36c7bd5a8",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6b40893f87c1dd970896ced6c198ff2416df353e",
+                "reference": "6b40893f87c1dd970896ced6c198ff2416df353e",
                 "shasum": ""
             },
             "require": {
@@ -6914,13 +6424,6 @@
                 "gii",
                 "yii2"
             ],
-            "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
-                "issues": "https://github.com/yiisoft/yii2-gii/issues",
-                "source": "https://github.com/yiisoft/yii2-gii",
-                "wiki": "http://www.yiiframework.com/wiki/"
-            },
             "funding": [
                 {
                     "url": "https://github.com/yiisoft",
@@ -6935,7 +6438,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-06T08:11:09+00:00"
+            "time": "2021-05-06T08:11:29+00:00"
         }
     ],
     "aliases": [],
@@ -6958,5 +6461,5 @@
         "ext-pdo": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "1.1.0"
 }
