@@ -2,7 +2,9 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="simplre.com" id="39ee1c63-8419-4409-bdc9-6099c9620c05" keyPath="$USER_HOME$/tmp/mega/projects/craft/craftbelaws.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" />
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="3.101.43.188" id="39ee1c63-8419-4409-bdc9-6099c9620c05" keyPath="$USER_HOME$/tmp/mega/projects/craft/craftbelaws.pem" port="22" customName="fun" nameFormat="CUSTOM" username="ubuntu">
+        <option name="customName" value="fun" />
+      </sshConfig>
     </configs>
   </component>
 </project>
