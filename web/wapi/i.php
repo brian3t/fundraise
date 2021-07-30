@@ -4,7 +4,16 @@
  * Send email
  */
 header('Content-Type: application/json');
-require_once('../../vendor/autoload.php');
+
+$http_origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (str_contains($http_origin, 'jslib') || str_contains($http_origin, 'craftbelly'))
+{
+    header("Access-Control-Allow-Origin: *");
+}
+//$remote_addr = $_SERVER['REMOTE_ADDR'] ?? '';
+//echo ("server is " . json_encode($_SERVER));
+
+require_once('../vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
