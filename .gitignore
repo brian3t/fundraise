@@ -44,3 +44,4 @@ web/img/avatars/*
 web/uploads/avatar/*
 /b3/tools/*.sql
 /web/wapi/conf.php
+/.idea/
