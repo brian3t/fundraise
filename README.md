@@ -1,13 +1,18 @@
-REST Api for ERM mobile app
+REST Api for Fundyay mobile app
+
+#### Install
+`mkdir log && chmod 777 log`
+Make sure this file exists: `./assets/AppAssets.php`  
+`mkdir web/assets && chmod -R 777 web/assets`  
+`mkdir runtime && chmod -R 777 runtime`  
+
+`cp -aR vendor/bower-asset ./vendor/bower`  
+
 
 Built with Yii 2.0.14
 
 Changelog
 ------------
-2021/01/31
-- Added `profile` table column `usr_ava` (uploads/avatar/ or api/avatar)
-- Added `user_camp` table column `goal` 
-
 Screenshot:
 
 ![alt tag](http://i.imgur.com/NyNASU9.png)
